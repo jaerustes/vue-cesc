@@ -5,7 +5,7 @@ import { getFirestore } from "firebase/firestore";
 // Configuración de Firebase, usa tus propias credenciales
 const firebaseConfig = {
     apiKey: import.meta.env.apiKey,
-    authDomain: import.meta.apiKey.authDomain,
+    authDomain: 'hist-esc.firebaseapp.com',
     databaseURL: "https://hist-esc-default-rtdb.europe-west1.firebasedatabase.app",
     projectId: "hist-esc",
     storageBucket: "hist-esc.appspot.com",
