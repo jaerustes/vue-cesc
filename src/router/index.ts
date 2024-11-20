@@ -1,9 +1,9 @@
 // src/router/index.js o src/router/index.ts
-import { createRouter, createWebHistory } from 'vue-router';
-import ListAlumnes from '../components/ListAlumnes.vue';
-import VerRespuestas from '../components/VerRespuestas.vue';
+import { createRouter, createWebHistory } from 'vue-router'
+import ListAlumnes from '../components/ListAlumnes.vue'
+import VerRespuestas from '../components/VerRespuestas.vue'
 import SeleccionarProtocolo from '../components/SeleccionarProtocolo.vue'
-import CrearProtocolo from '@/components/CrearProtocolo.vue';
+import CrearProtocolo from '../components/CrearProtocolo.vue'
 
 const routes = [
   {
@@ -36,12 +36,12 @@ const routes = [
   {
     path: '/',
     redirect: '/CESC', // Redirecciona a la ruta inicial
-  }
-];
+  },
+]
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
-});
+})
 
-export default router;
+export default router

@@ -18,11 +18,11 @@
     "bootstrap-vue": "^1.5.1",
     "firebase": "^11.0.1",
     "pinia": "^2.2.4",
+    "vite": "^5.4.11",
     "vue": "^3.5.12",
     "vue-cli": "^2.9.6",
     "vue-cli-service": "^5.0.10",
-    "vue-router": "^4.4.5",
-    "vite": "^5.4.11"
+    "vue-router": "^4.4.5"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
