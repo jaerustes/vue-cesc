@@ -31,7 +31,7 @@
         </button>
         
         <div v-if="protocolos.length" class="mt-4">
-          <h2 class="text-center text-primary">Protocolos Existentes</h2>
+          <h2 class="text-center text-primary">Protocols Existents</h2>
           <ul class="list-group mt-3">
             <li v-for="protocolo in protocolos" :key="protocolo.id" class="list-group-item d-flex justify-content-between align-items-center">
               <span class="fw-bold">{{ protocolo.nombre }}</span>
