@@ -2,7 +2,7 @@
   <div class="container mt-5">
     <div class="mb-4 card p-3 bg-light border-primary">
       <label for="protocoloSelect" class="form-label fs-5 fw-bold text-primary">
-        Selecciona un Sociograma:
+        Sel·lecciona un Sociograma:
       </label>
       <select 
         id="protocoloSelect" 
@@ -10,7 +10,7 @@
         v-model="protocoloSeleccionado"
         required
       >
-        <option disabled value="">Selecciona un protocolo</option>
+        <option disabled value="">Sel·lecciona un protocolo</option>
         <option v-for="protocolo in protocolos" :key="protocolo.id" :value="protocolo.id">
           {{ protocolo.nombre }}
         </option>
