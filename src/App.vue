@@ -95,39 +95,42 @@
 </template>
 
 <script>
-import { ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 export default {
   setup() {
-    const router = useRouter();
-    const usuario = ref('');
-    const password = ref('');
-    const mostrarModal = ref(false);
-    const rutaDestino = ref('');
+    const router = useRouter()
+    const usuario = ref('')
+    const password = ref('')
+    const mostrarModal = ref(false)
+    const rutaDestino = ref('')
 
-    const accederRuta = (ruta) => {
-      rutaDestino.value = ruta;
+    const accederRuta = ruta => {
+      rutaDestino.value = ruta
       // Si la ruta es "Nuevo Sociograma" o "Respuestas", mostrar el modal; si es "Ver Respuestas", redirigir directamente
       if (ruta === '/CrearProtocolo' || ruta === '/') {
-        mostrarModal.value = true;
+        mostrarModal.value = true
       } else {
-        router.push(ruta);
+        router.push(ruta)
       }
-    };
+    }
 
     const validarAcceso = () => {
-      if (usuario.value === import.meta.env.VITE_APP_USER && password.value === import.meta.env.VITE_APP_PASSWORD {
-        mostrarModal.value = false;
-        router.push(rutaDestino.value);
+      if (
+        usuario.value === import.meta.env.VITE_APP_USER &&
+        password.value === import.meta.env.VITE_APP_PASSWORD
+      ) {
+        mostrarModal.value = false
+        router.push(rutaDestino.value)
       } else {
-        alert('Usuario o contraseña incorrectos');
+        alert('Usuario o contraseña incorrectos')
       }
-    };
+    }
 
     const cerrarModal = () => {
-      mostrarModal.value = false;
-    };
+      mostrarModal.value = false
+    }
 
     return {
       usuario,
@@ -137,9 +140,9 @@ export default {
       accederRuta,
       validarAcceso,
       cerrarModal,
-    };
+    }
   },
-};
+}
 </script>
 
 <style scoped>
