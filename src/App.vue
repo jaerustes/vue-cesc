@@ -4,13 +4,13 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Sociograma</a>
-        <button 
-          class="navbar-toggler" 
-          type="button" 
-          data-bs-toggle="collapse" 
-          data-bs-target="#navbarNav" 
-          aria-controls="navbarNav" 
-          aria-expanded="false" 
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
@@ -18,13 +18,25 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#" @click.prevent="accederRuta('/CrearProtocolo')">Nou Sociograma</a>
+              <a
+                class="nav-link"
+                href="#"
+                @click.prevent="accederRuta('/CrearProtocolo')"
+                >Nou Sociograma</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" @click.prevent="accederRuta('/')">Respostes</a>
+              <a class="nav-link" href="#" @click.prevent="accederRuta('/')"
+                >Respostes</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" @click.prevent="accederRuta('/ver-respuestas')">Veure Respostes</a>
+              <a
+                class="nav-link"
+                href="#"
+                @click.prevent="accederRuta('/ver-respuestas')"
+                >Veure Respostes</a
+              >
             </li>
           </ul>
         </div>
@@ -32,19 +44,44 @@
     </nav>
 
     <!-- Modal para login -->
-    <div v-if="mostrarModal" class="modal fade show" tabindex="-1" style="display: block;">
+    <div
+      v-if="mostrarModal"
+      class="modal fade show"
+      tabindex="-1"
+      style="display: block"
+    >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">Acceso Requerido</h5>
-            <button type="button" class="btn-close" @click="cerrarModal"></button>
+            <button
+              type="button"
+              class="btn-close"
+              @click="cerrarModal"
+            ></button>
           </div>
           <div class="modal-body">
-            <input type="text" v-model="usuario" placeholder="Usuario" class="form-control mb-3">
-            <input type="password" v-model="password" placeholder="Contraseña" class="form-control">
+            <input
+              type="text"
+              v-model="usuario"
+              placeholder="Usuario"
+              class="form-control mb-3"
+            />
+            <input
+              type="password"
+              v-model="password"
+              placeholder="Contraseña"
+              class="form-control"
+            />
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" @click="validarAcceso">Acceder</button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              @click="validarAcceso"
+            >
+              Acceder
+            </button>
           </div>
         </div>
       </div>
@@ -80,7 +117,7 @@ export default {
     };
 
     const validarAcceso = () => {
-      if (usuario.value === 'orientacio' && password.value === 'manolo') {
+      if (usuario.value === import.meta.env.VITE_APP_USER && password.value === import.meta.env.VITE_APP_PASSWORD {
         mostrarModal.value = false;
         router.push(rutaDestino.value);
       } else {
