@@ -24,7 +24,7 @@
               <a class="nav-link" href="#" @click.prevent="accederRuta('/')">Respostes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" @click.prevent="accederRuta('/ver-respuestas')">Veure Resptes</a>
+              <a class="nav-link" href="#" @click.prevent="accederRuta('/ver-respuestas')">Veure Respostes</a>
             </li>
           </ul>
         </div>
